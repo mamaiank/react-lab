@@ -10,8 +10,8 @@ const HtmlApp = (value) => {
             <Row>
                 {
                     value.data.map((result, key) => (
-                        <Col xs={6} md={4} key={key}>
-                            <Card style={{ width: '18rem' }}>
+                        <Col xs={12} md={6} lg={4} key={key}>
+                            <Card className="mx-auto" style={{ width: '18rem' }}>
                                 <Card.Body>
                                     <Card.Title><Link to={`/post/${result.id}`}>{result.title}</Link></Card.Title>
                                     <span className="content-html" dangerouslySetInnerHTML={{ __html: result.body }} />
